@@ -41,6 +41,7 @@ jobs:
           GOARCH: ${{ matrix.arch }}
           CGO_ENABLED: 0
         run: |
+          go test
           echo "Building for $GOOS-$GOARCH"
           go build -v -trimpath -ldflags="-s -w" -o ${{ matrix.binary_name }} ./cmd/totp/
 
