@@ -30,6 +30,4 @@ func TestGenerateTotp(t *testing.T) {
 	if otp != "282760" {
 		t.FailNow()
 	}
-
-	t.Log("Generated OTP: ", otp)
 }
